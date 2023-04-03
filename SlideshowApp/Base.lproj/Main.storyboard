@@ -1,24 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1N-N8-hGE">
+                                <rect key="frame" x="159" y="529" width="59" height="40"/>
+                                <color key="backgroundColor" red="0.08034688224" green="0.37472781659999999" blue="0.3931425932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Yg-U8-NZx"/>
+                                </constraints>
+                                <color key="tintColor" red="0.8982599631" green="0.8982599631" blue="0.8982599631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9t-Er-WJl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20I-gO-SQi">
+                                <rect key="frame" x="263" y="529" width="99" height="40"/>
+                                <color key="backgroundColor" red="0.08034688224" green="0.37472781659999999" blue="0.3931425932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CLD-1a-Mof"/>
+                                </constraints>
+                                <color key="tintColor" red="0.8982599631" green="0.8982599631" blue="0.8982599631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="再生/停止"/>
+                                <connections>
+                                    <action selector="slideshowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zL-yN-b5Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfX-WY-k6J">
+                                <rect key="frame" x="55" y="529" width="59" height="40"/>
+                                <color key="backgroundColor" red="0.080346882244267143" green="0.37472781662921184" blue="0.39314259322525247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jqC-G3-wzP"/>
+                                </constraints>
+                                <color key="tintColor" red="0.8982599631" green="0.8982599631" blue="0.8982599631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="進む"/>
+                                <connections>
+                                    <action selector="forwardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AhH-v6-g5E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqf-RK-2LH">
+                                <rect key="frame" x="106.66666666666669" y="179" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="FfO-83-ZGv"/>
+                                    <constraint firstAttribute="width" constant="180" id="nuA-tJ-6dv"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="sunset"/>
+                                <connections>
+                                    <segue destination="psB-Q8-Exw" kind="show" id="mTW-yy-9bo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KfX-WY-k6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="OsD-Ga-SfU"/>
+                            <constraint firstItem="v1N-N8-hGE" firstAttribute="leading" secondItem="KfX-WY-k6J" secondAttribute="trailing" constant="45" id="SS0-gE-6d3"/>
+                            <constraint firstItem="20I-gO-SQi" firstAttribute="leading" secondItem="v1N-N8-hGE" secondAttribute="trailing" constant="45" id="Sdd-Dr-VnK"/>
+                            <constraint firstItem="20I-gO-SQi" firstAttribute="top" secondItem="aqf-RK-2LH" secondAttribute="bottom" constant="170" id="chr-2L-aWK"/>
+                            <constraint firstItem="v1N-N8-hGE" firstAttribute="leading" secondItem="KfX-WY-k6J" secondAttribute="trailing" constant="45" id="dHE-5g-kCB"/>
+                            <constraint firstItem="20I-gO-SQi" firstAttribute="leading" secondItem="v1N-N8-hGE" secondAttribute="trailing" constant="45" id="gql-49-BSy"/>
+                            <constraint firstItem="v1N-N8-hGE" firstAttribute="top" secondItem="aqf-RK-2LH" secondAttribute="bottom" constant="170" id="mCb-fa-fkQ"/>
+                            <constraint firstItem="aqf-RK-2LH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qCL-U6-lg4"/>
+                            <constraint firstItem="aqf-RK-2LH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="quI-yz-n10"/>
+                            <constraint firstItem="KfX-WY-k6J" firstAttribute="top" secondItem="aqf-RK-2LH" secondAttribute="bottom" constant="170" id="yAp-lf-0y1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageButton" destination="aqf-RK-2LH" id="8Z1-CZ-BcG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="5"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="lsv-r5-Ecj">
+            <objects>
+                <viewController id="psB-Q8-Exw" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IlH-ry-Uar">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-V6-U7n">
+                                <rect key="frame" x="156" y="534" width="70" height="40"/>
+                                <color key="backgroundColor" red="0.08034688224" green="0.37472781659999999" blue="0.3931425932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="KmZ-IE-cV7"/>
+                                    <constraint firstAttribute="height" constant="40" id="zg6-3a-oRd"/>
+                                </constraints>
+                                <color key="tintColor" red="0.8982599631" green="0.8982599631" blue="0.8982599631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                <connections>
+                                    <segue destination="h3Q-Af-C77" kind="unwind" unwindAction="unwind:" id="2o8-nn-eOr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wzt-Q7-yJP">
+                                <rect key="frame" x="21.666666666666657" y="109" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="n7D-Ow-aiT"/>
+                                    <constraint firstAttribute="width" constant="350" id="pum-Gd-L0J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q62-gC-rmi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7SK-V6-U7n" firstAttribute="centerX" secondItem="IlH-ry-Uar" secondAttribute="centerX" id="a2O-Gw-aHA"/>
+                            <constraint firstItem="wzt-Q7-yJP" firstAttribute="centerX" secondItem="IlH-ry-Uar" secondAttribute="centerX" id="tTk-a0-soI"/>
+                            <constraint firstItem="7SK-V6-U7n" firstAttribute="top" secondItem="wzt-Q7-yJP" secondAttribute="bottom" constant="75" id="xxS-XR-nHD"/>
+                            <constraint firstItem="wzt-Q7-yJP" firstAttribute="top" secondItem="Q62-gC-rmi" secondAttribute="top" constant="50" id="zG5-l5-kN4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8hW-zc-GIu"/>
+                    <connections>
+                        <outlet property="largeImage" destination="wzt-Q7-yJP" id="98I-EV-t0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChB-oV-QfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="h3Q-Af-C77" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sunset" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
