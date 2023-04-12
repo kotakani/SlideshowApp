@@ -21,7 +21,9 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // スライドショーが再生されていたら，停止する
         if stateSlideshow {
+            stateSlideshow = false
             if timer != nil {
                 timer.invalidate()  // タイマーを停止する
                 timer = nil

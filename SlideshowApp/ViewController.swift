@@ -98,14 +98,12 @@ class ViewController: UIViewController {
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         // 他の画面からsegueを使って戻ってきた時に呼ばれる
-        slideshowButton((Any).self)
-        slideshowButton((Any).self)  // slideshowButtonを二回呼び出すことで元の状態に戻す
-        
-        // 以下では再生中から戻っても再生が再開されない
-//        if stateSlideshow {
-//            stateSlideshow.toggle()
-//            slideshowButton((Any).self)
-//        }
+        // タイマーを停止する
+        stateSlideshow = false
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
     }
 
 
